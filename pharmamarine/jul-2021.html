@@ -1,10 +1,20 @@
 <html>
-    <head><title>Pharma Marine Jul 2021</title></head>
-    <body>
-        <div>
+    <head><title>Pharma Marine Jul 2021</title>
+    <style>
+        table {
+            text-align: center;
+            margin: 0 auto;
+        }
+    </style>
+    </head>
+    <body style="text-align: center; margin: 0 auto;">
+        <div style="margin-bottom: 90px; padding-top: 90px; margin-top: 90px; text-align: center;">
+            <button class="copybtn" onclick="myFunction()">Klikk her for å kopiere e-post</button>
+        </div>
+        <div class="width: 100%; margin: 0 auto; text-align: center;">
             <table cellspacing="0" cellpadding="0">
                 <tr>
-                    <td style="text-align: center"><a href="https://d3w3dt7pm49qg4.cloudfront.net/1639613662/pharma-marine-jul-10-2021.png" style="font-family: Arial, sans-serif; font-size: 11px; text-align: center;">If you can't see the content of this email, please click here to open the mail in your browser</a></td>
+                    <td style="text-align: center"><a href="https://d3w3dt7pm49qg4.cloudfront.net/1639613662/pharma-marine-jul-10-2021.png" style="font-family: Arial, sans-serif; font-size: 11px; text-align: center;">If you can't see the content of this email, please click here to open it in your browser</a></td>
                 </tr>
                 <tr>
                     <td>
@@ -14,5 +24,22 @@
             </table>
         </div>
     </body>
-    
+    <script>
+        var copyTextareaBtn = document.querySelector('.copybtn');
+
+        copyTextareaBtn.addEventListener('click', function(event) {
+        var copy_text = document.getElementsByTagName("table")[0];
+        var range = document.createRange();
+        range.selectNode(copy_text);
+        window.getSelection().addRange(range);
+
+        try {
+            var successful = document.execCommand('copy');
+            var msg = successful ? 'successful' : 'unsuccessful';
+            console.log('Copying text command was ' + msg);
+        } catch (err) {
+            console.log('Oops, unable to copy');
+        }
+        });
+    </script>
 </html>
