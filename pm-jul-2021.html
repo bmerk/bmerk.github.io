@@ -1,17 +1,27 @@
 <html>
     <head><title>Pharma Marine Jul 2021</title>
     <style>
+        body {
+            text-align: center;
+            margin: 0 auto;
+        }
+        
         table {
             text-align: center;
             margin: 0 auto;
         }
+        .button-container {
+            margin-bottom: 90px;
+            margin-top: 90px;
+            text-align: center;
+        }
     </style>
     </head>
-    <body style="text-align: center; margin: 0 auto;">
-        <div style="margin-bottom: 90px; padding-top: 90px; margin-top: 90px; text-align: center;">
+    <body>
+        <div class="button-container">
             <button class="copybtn" onclick="myFunction()">Klikk her for å kopiere e-post</button>
         </div>
-        <div class="width: 100%; margin: 0 auto; text-align: center;">
+        <div>
             <table cellspacing="0" cellpadding="0">
                 <tr>
                     <td style="text-align: center"><a href="https://d3w3dt7pm49qg4.cloudfront.net/1639613662/pharma-marine-jul-10-2021.png" style="font-family: Arial, sans-serif; font-size: 11px; text-align: center;">If you can't see the content of this email, please click here to open it in your browser</a></td>
@@ -36,7 +46,8 @@
         try {
             var successful = document.execCommand('copy');
             var msg = successful ? 'successful' : 'unsuccessful';
-            console.log('Copying text command was ' + msg);
+            console.log('Copying content command was ' + msg);
+            alert('Innholdet er kopiert, og kan nå limes inn i en e-post.')
         } catch (err) {
             console.log('Oops, unable to copy');
         }
