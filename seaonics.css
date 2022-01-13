@@ -1,0 +1,15 @@
+body {
+  font-size: 18px !important;
+}
+
+.navbar {
+  background: #fff !important;
+}
+
+.logo a img {
+  max-width: 220px;
+}
+
+.wr-link-top li a {
+  display:block
+}
