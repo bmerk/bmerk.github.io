@@ -13,3 +13,11 @@ body {
 .wr-link-top li a {
   display:block
 }
+.dropdown-menu > li > a:hover, {
+    text-decoration: none;
+    color: #eee;
+    background-color: rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 2px 0px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0 2px 2px 0px rgb(0 0 0 / 10%);
+    box-shadow: 0 2px 2px 0px rgb(0 0 0 / 10%);
+}
